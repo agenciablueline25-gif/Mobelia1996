@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="facebook-domain-verification" content="tvmb857y8offulwl8nix32ci9ufp2h" />
+    <title>MOBELIA - Muebles Modernos & Diseño Contemporáneo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.95) 0%, rgba(160, 82, 45, 0.9) 100%);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #D2691E 0%, #CD853F 50%, #DEB887 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(210, 105, 30, 0.15);
+        }
+        .animate-float {
+            animation: float 8s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(210, 105, 30, 0.5);
+        }
+        .border-glow {
+            box-shadow: 0 0 20px rgba(210, 105, 30, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
+
+    <!-- HEADER -->
+    <header class="bg-white/95 backdrop-blur-xl sticky top-0 z-30 border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between py-6">
+            <div class="flex items-center space-x-4">
+                <div class="w-14 h-14 flex items-center justify-center relative">
+                    <!-- Logo Mobelia -->
+                    <svg class="w-full h-full" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="mobeliaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#CD853F;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="28" cy="28" r="26" fill="url(#mobeliaGradient)" stroke="white" stroke-width="2"/>
+                        <rect x="16" y="20" width="24" height="4" fill="white" rx="2"/>
+                        <rect x="18" y="24" width="20" height="2" fill="white" rx="1"/>
+                        <rect x="20" y="28" width="16" height="2" fill="white" rx="1"/>
+                        <rect x="22" y="32" width="12" height="2" fill="white" rx="1"/>
+                        <rect x="24" y="36" width="8" height="2" fill="white" rx="1"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-black bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 bg-clip-text text-transparent">MOBELIA</h1>
+                    <p class="text-slate-600 text-sm font-medium tracking-wide">Muebles Modernos</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-10">
+                <a href="#inicio" class="text-slate-700 hover:text-orange-600 transition-all duration-300 font-semibold relative group">
+                    Inicio
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#productos" class="text-slate-700 hover:text-orange-600 transition-all duration-300 font-semibold relative group">
+                    Productos
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#categorias" class="text-slate-700 hover:text-orange-600 transition-all duration-300 font-semibold relative group">
+                    Categorías
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#galeria" class="text-slate-700 hover:text-orange-600 transition-all duration-300 font-semibold relative group">
+                    Galería
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contacto" class="text-slate-700 hover:text-orange-600 transition-all duration-300 font-semibold relative group">
+                    Contacto
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-amber-900 via-orange-900 to-amber-800">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #D2691E 2px, transparent 2px), radial-gradient(circle at 75% 75%, #CD853F 2px, transparent 2px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
+            <div class="inline-flex items-center space-x-3 bg-orange-500/20 backdrop-blur-sm rounded-full px-8 py-4 mb-12 border border-orange-500/30">
+                <div class="w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
+                <span class="text-orange-100 text-sm font-semibold tracking-wide">Muebles de Calidad Premium</span>
+            </div>
+            
+            <h2 class="text-6xl md:text-8xl font-black mb-10 leading-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500 text-glow">Transformamos</span>
+                <br>
+                <span class="text-white">Tu Hogar</span>
+                <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-amber-400 to-orange-400 text-glow">Con Estilo</span>
+            </h2>
+            
+            <p class="text-xl md:text-2xl mb-16 leading-relaxed max-w-5xl mx-auto text-slate-200 font-light">
+                Descubre nuestra colección exclusiva de muebles modernos que combinan 
+                <span class="text-orange-300 font-medium">diseño contemporáneo</span> con la máxima calidad y funcionalidad para tu hogar.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <button class="group bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold py-5 px-10 text-xl rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl border-glow">
+                    <span class="flex items-center space-x-3">
+                        <span>Ver Catálogo</span>
+                        <svg class="w-6 h-6 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </span>
+                </button>
+                <button class="group bg-transparent hover:bg-white/10 text-white font-bold py-5 px-10 text-xl rounded-2xl transition-all duration-300 border-2 border-white/30 hover:border-orange-400/50 backdrop-blur-sm">
+                    <span class="flex items-center space-x-3">
+                        <span>Ver Galería</span>
+                        <svg class="w-6 h-6 transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="w-6 h-10 border-2 border-orange-400/50 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-orange-400 rounded-full mt-2 animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-black text-slate-800 mb-2">500+</h3>
+                    <p class="text-slate-600 text-lg">Muebles Vendidos</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-black text-slate-800 mb-2">200+</h3>
+                    <p class="text-slate-600 text-lg">Clientes Satisfechos</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-black text-slate-800 mb-2">10+</h3>
+                    <p class="text-slate-600 text-lg">Años de Experiencia</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-black text-slate-800 mb-2">100%</h3>
+                    <p class="text-slate-600 text-lg">Calidad Garantizada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="productos" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-slate-800">Nuestros Productos</h2>
+                <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                    Descubre nuestra amplia gama de muebles que combinan 
+                    <span class="text-orange-600 font-semibold">funcionalidad y elegancia</span> para cada espacio de tu hogar.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl card-hover border border-slate-200/50">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Sofás & Sillones</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Sofás modernos y sillones ergonómicos diseñados para brindar máximo confort y estilo a tu sala de estar.
+                    </p>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                            <span>Sofás de 2 y 3 cuerpos</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                            <span>Sillones reclinables</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+                            <span>Chaise Longue</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl card-hover border border-slate-200/50">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Mesas & Comedores</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Mesas de comedor, centro y auxiliares que se adaptan a cualquier estilo decorativo y espacio disponible.
+                    </p>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
+                            <span>Mesas de comedor extensibles</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
+                            <span>Mesas de centro modernas</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-amber-500 rounded-full"></div>
+                            <span>Mesas auxiliares</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl card-hover border border-slate-200/50">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Dormitorios</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Muebles para dormitorio completos que crean ambientes relajantes y funcionales para tu descanso.
+                    </p>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full"></div>
+                            <span>Camas de diferentes tamaños</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full"></div>
+                            <span>Roperos y cómodas</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full"></div>
+                            <span>Mesas de luz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section id="categorias" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, #D2691E 2px, transparent 2px), radial-gradient(circle at 75% 75%, #CD853F 2px, transparent 2px); background-size: 50px 50px;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-slate-800">Categorías</h2>
+                <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                    Explora nuestras categorías especializadas y encuentra el 
+                    <span class="text-orange-400 font-semibold">mueble perfecto</span> para cada espacio de tu hogar.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <!-- Category 1 -->
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                        </svg>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">Sala de Estar</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Sofás, sillones, mesas de centro y muebles auxiliares para crear el ambiente perfecto.
+                    </p>
+                </div>
+                
+                <!-- Category 2 -->
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                        </svg>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">Comedor</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Mesas de comedor, sillas y aparadores para disfrutar de las mejores comidas en familia.
+                    </p>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">Dormitorio</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Camas, roperos y muebles auxiliares para crear tu refugio personal perfecto.
+                    </p>
+                </div>
+                
+                <!-- Category 4 -->
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">Oficina</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Escritorios, sillas ergonómicas y muebles de oficina para maximizar tu productividad.
+                    </p>
+                </div>
+                
+                <!-- Process Flow Lines -->
+                <div class="hidden md:block absolute top-12 left-1/4 w-1/2 h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500"></div>
+                <div class="hidden md:block absolute top-12 left-1/2 w-1/2 h-1 bg-gradient-to-r from-orange-500 via-red-500 to-orange-500"></div>
+                <div class="hidden md:block absolute top-12 left-3/4 w-1/2 h-1 bg-gradient-to-r from-red-500 via-orange-500 to-red-500"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="galeria" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black mb-8 text-slate-800">Galería</h2>
+                <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                    Inspírate con nuestros diseños y descubre cómo nuestros muebles pueden 
+                    <span class="text-orange-600 font-semibold">transformar tu hogar</span>.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Gallery Item 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="h-64 bg-gradient-to-br from-orange-500 to-amber-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-sm font-semibold text-slate-800">Sala Moderna</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Sala de Estar Contemporánea</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Diseño moderno con sofás de líneas limpias y mesas de centro minimalistas.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-600 font-semibold">Desde $450.000</span>
+                            <div class="flex space-x-2">
+                                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Sofá</span>
+                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-sm rounded-full">Mesa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="h-64 bg-gradient-to-br from-amber-500 to-orange-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-sm font-semibold text-slate-800">Comedor</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Comedor Familiar Elegante</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Mesa extensible con sillas ergonómicas perfectas para reuniones familiares.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-amber-600 font-semibold">Desde $320.000</span>
+                            <div class="flex space-x-2">
+                                <span class="px-3 py-1 bg-amber-100 text-amber-700 text-sm rounded-full">Mesa</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Sillas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover">
+                    <div class="h-64 bg-gradient-to-br from-orange-600 to-red-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1">
+                            <span class="text-sm font-semibold text-slate-800">Dormitorio</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Suite Master Minimalista</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            Dormitorio completo con cama king size, ropero empotrado y mesas de luz modernas.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-orange-600 font-semibold">Desde $680.000</span>
+                            <div class="flex space-x-2">
+                                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-sm rounded-full">Cama</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-700 text-sm rounded-full">Ropero</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold py-4 px-8 text-lg rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-xl">
+                    Ver Más Diseños
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="py-24 bg-gradient-to-br from-amber-900 via-orange-900 to-amber-800 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-6xl font-black mb-8">¿Listo para Transformar Tu Hogar?</h2>
+                <p class="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+                    Contacta con nosotros y descubre cómo podemos crear el 
+                    <span class="text-orange-400 font-semibold">hogar de tus sueños</span> con nuestros muebles de calidad.
+                </p>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-xl rounded-3xl p-12 mb-16 border border-white/20">
+                <h3 class="text-3xl font-bold mb-8 text-center">Consulta Gratuita</h3>
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="group">
+                            <input type="text" placeholder="Nombre completo" 
+                                   class="w-full px-6 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-orange-400 bg-white/20 backdrop-blur-sm text-white placeholder-white/70 text-lg transition-all duration-300 group-hover:bg-white/25" required>
+                        </div>
+                        <div class="group">
+                            <input type="email" placeholder="Email" 
+                                   class="w-full px-6 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-orange-400 bg-white/20 backdrop-blur-sm text-white placeholder-white/70 text-lg transition-all duration-300 group-hover:bg-white/25" required>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="group">
+                            <input type="tel" placeholder="Teléfono" 
+                                   class="w-full px-6 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-orange-400 bg-white/20 backdrop-blur-sm text-white placeholder-white/70 text-lg transition-all duration-300 group-hover:bg-white/25" required>
+                        </div>
+                        <div class="group">
+                            <select class="w-full px-6 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-orange-400 bg-white/20 backdrop-blur-sm text-white text-lg transition-all duration-300 group-hover:bg-white/25" required>
+                                <option value="" class="text-slate-800">Tipo de mueble que buscas</option>
+                                <option value="sofa" class="text-slate-800">Sofás & Sillones</option>
+                                <option value="mesa" class="text-slate-800">Mesas & Comedores</option>
+                                <option value="dormitorio" class="text-slate-800">Dormitorios</option>
+                                <option value="oficina" class="text-slate-800">Muebles de Oficina</option>
+                                <option value="otro" class="text-slate-800">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <textarea placeholder="Cuéntanos sobre tu proyecto y qué tipo de ambiente buscas crear" rows="5" 
+                                  class="w-full px-6 py-4 rounded-2xl border-0 focus:ring-2 focus:ring-orange-400 bg-white/20 backdrop-blur-sm text-white placeholder-white/70 text-lg transition-all duration-300 group-hover:bg-white/25 resize-none" required></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold py-5 px-8 text-xl rounded-2xl transition-all duration-500 transform hover:scale-105 shadow-2xl border-glow">
+                        <span class="flex items-center justify-center space-x-3">
+                            <span>Solicitar Consulta Gratuita</span>
+                            <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Contact Info Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-orange-300">Teléfono</h3>
+                    <p class="text-slate-300 text-lg">+54 9 11 2611-9229</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-300">Email</h3>
+                    <p class="text-slate-300 text-lg">mobelia@gmail.com</p>
+                </div>
+                
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-orange-300">Showroom</h3>
+                    <p class="text-slate-300 text-lg">Castelli 7444<br>7600 - Mar del Plata, Argentina</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center">
+                            <!-- Footer Logo -->
+                            <svg class="w-full h-full" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="footerMobeliaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#CD853F;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#DEB887;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="28" cy="28" r="26" fill="url(#footerMobeliaGradient)" stroke="white" stroke-width="2"/>
+                                <rect x="16" y="20" width="24" height="4" fill="white" rx="2"/>
+                                <rect x="18" y="24" width="20" height="2" fill="white" rx="1"/>
+                                <rect x="20" y="28" width="16" height="2" fill="white" rx="1"/>
+                                <rect x="22" y="32" width="12" height="2" fill="white" rx="1"/>
+                                <rect x="24" y="36" width="8" height="2" fill="white" rx="1"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-orange-400">MOBELIA</h3>
+                            <p class="text-slate-400 text-sm font-medium tracking-wide">Muebles Modernos</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-slate-300 mb-6 leading-relaxed max-w-md">
+                        Transformamos tu hogar con muebles modernos y funcionales que combinan 
+                        diseño contemporáneo con la máxima calidad y durabilidad.
+                    </p>
+                    
+                    <div class="text-sm text-slate-400 space-y-2">
+                        <p><strong class="text-orange-400">Razón Social:</strong> Mobelia</p>
+                        <p><strong class="text-orange-400">CUIT:</strong> 20-35336562-3</p>
+                        <p><strong class="text-orange-400">Showroom:</strong> Castelli 7444, 7600 - Mar del Plata</p>
+                    </div>
+                </div>
+                
+                <!-- Products -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-orange-400">Productos</h4>
+                    <ul class="space-y-3 text-slate-300">
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Sofás & Sillones</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Mesas & Comedores</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Dormitorios</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Muebles de Oficina</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-orange-400">Empresa</h4>
+                    <ul class="space-y-3 text-slate-300">
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Sobre Nosotros</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Nuestro Showroom</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Galería</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition-colors duration-300">Blog de Decoración</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-slate-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-slate-400 text-center md:text-left">
+                        &copy; 2024 Mobelia. Todos los derechos reservados.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
+                        <a href="#" class="hover:text-orange-400 transition-colors duration-300">Política de Privacidad</a>
+                        <a href="#" class="hover:text-orange-400 transition-colors duration-300">Términos y Condiciones</a>
+                        <a href="#" class="hover:text-orange-400 transition-colors duration-300">Política de Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handling for furniture consultation
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('¡Gracias por tu consulta sobre muebles! Nuestro equipo se pondrá en contacto contigo pronto para ayudarte a encontrar los muebles perfectos para tu hogar.');
+                this.reset();
+            });
+        }
+
+        // Add hover effects to product cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Animate stats on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all stat elements
+        document.querySelectorAll('.text-center.group').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add CSS for fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>
